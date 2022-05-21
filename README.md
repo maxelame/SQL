@@ -8,4 +8,6 @@ CREATE TABLE months (id int, name varchar(10), days int);
 #### Ввод данных
 ```
 INSERT INTO months VALUES (1,'January',31);
+INSERT INTO months (id,name,days) VALUES (2,'February',29);
 ```
+
