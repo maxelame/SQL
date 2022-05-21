@@ -15,4 +15,9 @@ INSERT INTO months (id,name,days) VALUES (2,'February',29);
 SELECT name, weapon FROM characters
 SELECT name, weapon FROM characters ORDER BY name DESC
 ```
-
+#### Where
+```
+SELECT * 
+FROM characters
+WHERE weapon = 'pistol';
+```
