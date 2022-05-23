@@ -65,3 +65,8 @@ select title, author, amount, ROUND(price*0.7,2) as new_price from book
 ```
 select author, title, ROUND(if(author = "Булгаков М.А.", price*1.1, if(author = "Есенин С.А.", price*1.05, price*1)),2) as new_price from book
 ```
+
+#### Выборка данных по условию
+```
+select author, title, price from book where amount < 10
+```
