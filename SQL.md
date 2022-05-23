@@ -53,3 +53,9 @@ select title Название, author Автор from book
 ```
 select title, amount, amount * 1.65 as pack from book
 ```
+
+#### Выборка данных, вычисляемые столбцы, математические функции
+
+```
+select title, author, amount, ROUND(price*0.7,2) as new_price from book
+```
