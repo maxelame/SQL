@@ -47,3 +47,9 @@ select author, title, price from book
 ```
 select title Название, author Автор from book
 ```
+
+#### Выборка данных с созданием вычисляемого столбца
+
+```
+select title, amount, amount * 1.65 as pack from book
+```
