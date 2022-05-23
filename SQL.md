@@ -40,3 +40,10 @@ select * from book /* выборка всех данных таблицы */
 ```
 select author, title, price from book
 ```
+
+
+#### Выборка новых столбцов и присвоение им новых имен
+
+```
+select title Название, author Автор from book
+```
