@@ -109,3 +109,10 @@ where (title like "_% _%") and author like "%С.%"
 order by title
 ```
 
+#### Отобрать различные (уникальные) элементы столбца amount таблицы book.
+
+```
+SELECT amount
+FROM book
+GROUP BY amount;
+```
