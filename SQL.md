@@ -68,7 +68,9 @@ select author, title, ROUND(if(author = "Булгаков М.А.", price*1.1, if
 
 #### Выборка данных по условию
 ```
-select author, title, price from book where amount < 10
+select author, title, price 
+from book 
+where amount < 10
 ```
 
 #### Выборка данных, логические операции
