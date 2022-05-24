@@ -101,3 +101,10 @@ where amount between 2 and 14
 order by 1 desc, 2 
 ```
 
+#### Выборка данных, оператор LIKE
+
+```
+select title, author from book
+where (title like "_% _%") and author like "%С.%"
+order by title
+```
