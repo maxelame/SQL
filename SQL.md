@@ -45,7 +45,8 @@ select author, title, price from book
 #### Выборка новых столбцов и присвоение им новых имен
 
 ```
-select title Название, author Автор from book
+select title Название, author Автор 
+from book
 ```
 
 #### Выборка данных с созданием вычисляемого столбца
