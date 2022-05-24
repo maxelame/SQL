@@ -38,7 +38,8 @@ select * from book /* выборка всех данных таблицы */
 #### Выборка отдельных столбцов
 
 ```
-select author, title, price from book
+select author, title, price 
+from book
 ```
 
 
