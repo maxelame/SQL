@@ -178,7 +178,14 @@ HAVING SUM(price*amount) > 5000
 ORDER BY Стоимость DESC 
 ```
 
+#### Придумайте один или несколько запросов к нашей таблице book, используя групповые функции. Проверьте, правильно ли они работают.
 
+```
+SELECT book_id AS Порядковыйномер, author AS Автор, ROUND(AVG(price)) AS Средняяцена
+FROM book
+GROUP BY book_id, author
+HAVING Порядковый_номер > 2
+```
 
 
 
