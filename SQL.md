@@ -92,5 +92,12 @@ from book
 where price between 540.50 and 800 and amount in (2,3,5,7)
 ```
 
+#### Выборка данных с сортировкой
 
+```
+select author, title 
+from book
+where amount between 2 and 14
+order by 1 desc, 2 
+```
 
