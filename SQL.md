@@ -85,7 +85,12 @@ from book
 where (price < 500 or price > 600) and price * amount >= 5000
 ```
 
-
+#### Выборка данных, операторы BETWEEN, IN
+```
+select title, author
+from book
+where price between 540.50 and 800 and amount in (2,3,5,7)
+```
 
 
 
