@@ -255,3 +255,5 @@ USING
     INNER JOIN genre ON book.genre_id = genre.genre_id
 WHERE genre.name_genre = 'Поэзия';
 
+
+
