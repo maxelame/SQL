@@ -230,7 +230,14 @@ WHERE author_id IN
     GROUP BY author_id
     HAVING SUM(amount) < 20
     );
+    
 
+
+    DELETE FROM genre
+WHERE genre_id in (select genre_id 
+                          from book 
+                   group by genre_id 
+                   having count(amount) < 4);
 
 
 
