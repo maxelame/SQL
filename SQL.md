@@ -194,3 +194,13 @@ SET b.amount=b.amount + s.amount,
     s.amount=0
 WHERE b.price <> s.price;
 
+
+
+INSERT INTO author (name_author)
+SELECT supply.author
+FROM 
+    author 
+    RIGHT JOIN supply on author.name_author = supply.author
+WHERE name_author IS Null;
+
+SELECT * FROM author;
