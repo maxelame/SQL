@@ -269,6 +269,7 @@ WHERE author_id IN (SELECT author_id
 
 
                     
+```
 UPDATE book b
         INNER JOIN author a USING(author_id)
         INNER JOIN supply s ON b.title=s.title 
@@ -277,6 +278,7 @@ SET b.amount=b.amount + s.amount,
     b.price=(b.price*b.amount + s.price*s.amount)/(b.amount+s.amount),
     s.amount=0
 WHERE b.price <> s.price;
+```
 
 
 
