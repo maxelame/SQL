@@ -184,7 +184,7 @@ FROM book
 GROUP BY book_id, author
 HAVING Порядковый_номер > 2
 ```
-
+```
 UPDATE book b
         INNER JOIN author a USING(author_id)
         INNER JOIN supply s ON b.title=s.title 
@@ -192,7 +192,7 @@ UPDATE book b
 SET b.amount=b.amount + s.amount,
     b.price=(b.price*b.amount + s.price*s.amount)/(b.amount+s.amount),
     s.amount=0
-WHERE b.price <> s.price;
+WHERE b.price <> s.price;```
 
 
 ```
