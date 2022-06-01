@@ -336,6 +336,15 @@ WHERE genre_id in (select genre_id
 
 
 
+DELETE FROM author
+USING 
+    book
+    INNER JOIN author ON author.author_id = book.author_id
+    INNER JOIN genre ON book.genre_id = genre.genre_id
+WHERE genre.name_genre = 'Поэзия';
+
+
+
 
 
 
