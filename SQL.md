@@ -317,7 +317,7 @@ SET book.genre_id =
 SELECT * FROM book;
 
 
-
+```
 DELETE FROM author
 WHERE author_id IN
     (
@@ -325,7 +325,7 @@ WHERE author_id IN
     FROM book
     GROUP BY author_id
     HAVING SUM(amount) < 20
-    );
+    );```
 
 ```
 DELETE FROM genre
