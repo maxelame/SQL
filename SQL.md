@@ -212,7 +212,7 @@ FROM
     author 
     INNER JOIN supply ON author.name_author = supply.author
 WHERE amount <> 0;
-
+```
 UPDATE book, genre
 SET book.genre_id =
     CASE
@@ -229,7 +229,7 @@ WHERE author_id IN
     FROM book
     GROUP BY author_id
     HAVING SUM(amount) < 20
-    );
+    );```
     
 
 ```
