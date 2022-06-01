@@ -240,7 +240,7 @@ WHERE genre_id in (select genre_id
                    having count(amount) < 4);
 
 
-
+```
 DELETE FROM author
 USING 
     book
@@ -253,7 +253,7 @@ USING
     book
     INNER JOIN author ON author.author_id = book.author_id
     INNER JOIN genre ON book.genre_id = genre.genre_id
-WHERE genre.name_genre = 'Поэзия';
+WHERE genre.name_genre = 'Поэзия';```
 
 
 ```DELETE FROM author
