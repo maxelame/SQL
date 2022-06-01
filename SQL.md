@@ -195,7 +195,7 @@ SET b.amount=b.amount + s.amount,
 WHERE b.price <> s.price;
 
 
-
+```
 INSERT INTO author (name_author)
 SELECT supply.author
 FROM 
@@ -203,7 +203,7 @@ FROM
     RIGHT JOIN supply on author.name_author = supply.author
 WHERE name_author IS Null;
 
-SELECT * FROM author;
+SELECT * FROM author;```
 
 
 ```INSERT INTO book (title, author_id, price, amount)
