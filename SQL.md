@@ -256,7 +256,7 @@ USING
 WHERE genre.name_genre = 'Поэзия';
 
 
-DELETE FROM author
+```DELETE FROM author
 WHERE author_id IN (SELECT author_id
                     FROM book
                     WHERE genre_id = (SELECT genre_id
@@ -265,7 +265,7 @@ WHERE author_id IN (SELECT author_id
                                      HAVING SUM(amount)
                                      ORDER BY SUM(amount) DESC
                                      LIMIT 1) 
-                    GROUP BY author_id);
+                    GROUP BY author_id);```
 
 
                     
