@@ -336,14 +336,16 @@ WHERE genre_id in (select genre_id
 
 
 
+```
 DELETE FROM author
 USING 
     book
     INNER JOIN author ON author.author_id = book.author_id
     INNER JOIN genre ON book.genre_id = genre.genre_id
 WHERE genre.name_genre = 'Поэзия';
+```
 
-
+```
 DELETE FROM author
 WHERE author_id IN (SELECT author_id
                     FROM book
@@ -353,7 +355,7 @@ WHERE author_id IN (SELECT author_id
                                      HAVING SUM(amount)
                                      ORDER BY SUM(amount) DESC
                                      LIMIT 1) 
-                    GROUP BY author_id);
+                    GROUP BY author_id);```
 
 
 
