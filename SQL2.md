@@ -60,7 +60,7 @@ FROM buy_step JOIN buy USING(buy_id)
 WHERE step_id=3 AND DATEDIFF(date_step_end, date_step_beg) IS NOT NULL
 ORDER BY 1
 ```
-
+```
 SELECT DISTINCT name_client
 FROM client
     INNER JOIN buy USING (client_id)
@@ -69,7 +69,7 @@ FROM client
     INNER JOIN author USING (author_id)
 WHERE name_author LIKE "Достоевский%"
 ORDER BY name_client;
-
+```
 
 
 
