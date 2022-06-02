@@ -71,13 +71,13 @@ WHERE name_author LIKE "Достоевский%"
 ORDER BY name_client;
 ```
 
-
+```
 SELECT name_genre, SUM(buy_book.amount) as Количество
 FROM genre JOIN book USING(genre_id)
     JOIN buy_book USING(book_id)
 GROUP BY name_genre
 limit 1
-
+```
 
 
 
