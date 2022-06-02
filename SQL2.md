@@ -21,6 +21,14 @@ ORDER BY author.name_author, book.title
 ```
 
 
+SELECT city.name_city, COUNT(client_id) AS Количество
+FROM buy
+    INNER JOIN client USING (client_id)
+    INNER JOIN city USING (city_id)
+GROUP BY buy.client_id
+ORDER BY Количество DESC, name_city;
+
+
 
 
 
