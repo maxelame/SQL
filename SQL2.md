@@ -1,5 +1,5 @@
 # Stepik SQL
-
+```
 SELECT buy_book.buy_id, title, price, buy_book.amount
 FROM 
     client 
@@ -8,7 +8,7 @@ FROM
     INNER JOIN book ON buy_book.book_id=book.book_id
 WHERE name_client LIKE 'Баранов Павел'
 ORDER BY buy_book.buy_id, title;
-
+```
 
 
 
