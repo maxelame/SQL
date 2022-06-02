@@ -9,7 +9,7 @@ FROM
 WHERE name_client LIKE 'Баранов Павел'
 ORDER BY buy_book.buy_id, title;
 ```
-
+```
 SELECT author.name_author, book.title, COUNT(buy_book.book_id) AS Количество
 FROM
     book
@@ -18,7 +18,7 @@ FROM
     LEFT JOIN buy ON buy.buy_id = buy_book.buy_id
 GROUP BY author.name_author, book.title
 ORDER BY author.name_author, book.title
-
+```
 
 
 
