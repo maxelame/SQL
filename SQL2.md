@@ -51,7 +51,7 @@ FROM buy_step
 WHERE date_step_beg IS NOT NULL and date_step_end IS NULL
 ORDER BY buy_id
 ```
-
+```
 SELECT buy_id, DATEDIFF(date_step_end, date_step_beg) AS Количество_дней, 
         IF(DATEDIFF(date_step_end, date_step_beg)<=days_delivery, 0, DATEDIFF(date_step_end, date_step_beg) -               days_delivery) AS Опоздание
 FROM buy_step JOIN buy USING(buy_id)
@@ -59,7 +59,7 @@ FROM buy_step JOIN buy USING(buy_id)
               JOIN city USING(city_id)              
 WHERE step_id=3 AND DATEDIFF(date_step_end, date_step_beg) IS NOT NULL
 ORDER BY 1
-
+```
 
 
 
