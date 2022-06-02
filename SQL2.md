@@ -98,7 +98,7 @@ FROM buy_book bb
 GROUP BY Год, Месяц
 ORDER BY Месяц, Год;
 ```
-
+```
 WITH Title_sales AS (
 SELECT title, buy_book.amount, price
 FROM book
@@ -118,7 +118,7 @@ SELECT title, SUM(amount) AS Количество, SUM(amount*price) AS Сумм
 FROM Title_sales
 GROUP BY title
 ORDER BY Сумма DESC;
-
+```
 
 
 
