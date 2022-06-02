@@ -34,7 +34,7 @@ FROM step
     INNER JOIN buy_step ON step.step_id = buy_step.step_id
 WHERE buy_step.step_id = 1 and date_step_end IS NOT Null;
 ```
-
+```
 SELECT buy_id, name_client, SUM(price * buy_book.amount) as Стоимость
 FROM buy
     INNER JOIN client using(client_id)
@@ -42,7 +42,7 @@ FROM buy
     INNER JOIN book using(book_id)
 GROUP BY buy_book.buy_id
 ORDER BY 1;
-
+```
 
 
 
