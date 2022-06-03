@@ -11,6 +11,14 @@ SELECT * FROM client
 
 
 
+INSERT buy (buy_description, client_id)
+SELECT 'Связаться со мной по вопросу доставки', client_id
+FROM client
+WHERE name_client IN ('Попов Илья');
+
+
+
+
 
 
 
