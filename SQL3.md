@@ -87,7 +87,16 @@ SET date_step_end = IF(buy_id = 5 AND step_id = 1, '2020-04-13', date_step_end),
 ```
 
 
-
+UPDATE buy_step, step
+SET buy_step.date_step_end = '2020-04-13'
+WHERE buy_step.step_id = (SELECT step_id FROM step WHERE step.name_step = 'Оплата') AND buy_id = 5
+;
+UPDATE buy_step, step
+SET buy_step.date_step_beg = '2020-04-13'
+WHERE buy_step.step_id = (SELECT step_id +1 FROM step WHERE step.name_step = 'Оплата') AND buy_id = 5
+;
+SELECT * FROM buy_step
+WHERE buy_id = 5
 
 
 
