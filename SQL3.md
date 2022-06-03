@@ -55,6 +55,18 @@ ORDER BY title
 
 
 
+CREATE TABLE buy_pay
+SELECT buy_id, sum(buy_book.amount) as Количество, sum(book.price*buy_book.amount) as Итого
+FROM buy_book
+JOIN book USING(book_id)
+JOIN author USING(author_id)
+WHERE buy_id=5
+GROUP BY 1;
+
+SELECT * FROM buy_pay;
+
+
+
 
 
 
