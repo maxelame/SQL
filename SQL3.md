@@ -36,6 +36,7 @@ WHERE  buy_book.buy_id = 5 AND book.book_id = buy_book.book_id;
 SELECT * FROM book
 ```
 
+```
 CREATE TABLE buy_pay AS
 SELECT 
     title,
@@ -50,7 +51,7 @@ FROM
 WHERE
     buy_id = 5
 ORDER BY title
-
+```
 
 
 
