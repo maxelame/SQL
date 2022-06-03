@@ -17,6 +17,15 @@ FROM client
 WHERE name_client IN ('Попов Илья');
 ```
 
+INSERT INTO buy_book (buy_id, book_id, amount)
+VALUES
+    (5, (SELECT book_id FROM 
+         book JOIN author USING(author_id) 
+         WHERE title='Лирика' AND name_author LIKE 'Пастернак%'), 2),
+    (5, (SELECT book_id 
+         FROM book JOIN author USING(author_id) 
+         WHERE title='Белая Гвардия' AND name_author LIKE 'Булгаков%'), 1);
+SELECT * FROM buy_book;
 
 
 
