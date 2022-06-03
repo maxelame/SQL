@@ -80,7 +80,10 @@ UPDATE buy_step SET date_step_beg = '2020-04-12'
 WHERE buy_id = 5 AND step_id = 1;
 ```
 
-
+```
+UPDATE buy_step
+SET date_step_end = IF(buy_id = 5 AND step_id = 1, '2020-04-13', date_step_end),
+    date_step_beg = IF(buy_id = 5 AND step_id = 2, '2020-04-13', date_step_beg);
 
 
 
