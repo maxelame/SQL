@@ -36,7 +36,20 @@ WHERE  buy_book.buy_id = 5 AND book.book_id = buy_book.book_id;
 SELECT * FROM book
 ```
 
-
+CREATE TABLE buy_pay AS
+SELECT 
+    title,
+    name_author,
+    book.price,
+    buy_book.amount,
+    book.price * buy_book.amount AS 'Стоимость'
+FROM
+    buy_book
+    INNER JOIN book USING (book_id)
+    INNER JOIN author USING (author_id)
+WHERE
+    buy_id = 5
+ORDER BY title
 
 
 
