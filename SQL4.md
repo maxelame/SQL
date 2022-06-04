@@ -1,5 +1,6 @@
 # Stepik SQL
 
+```
 CREATE TABLE applicant
 SELECT program_id, enrollee.enrollee_id, SUM(result) AS itog
 FROM enrollee
@@ -11,7 +12,7 @@ FROM enrollee
 WHERE enrollee_subject.enrollee_id = enrollee.enrollee_id
 GROUP BY program_id, enrollee_id
 ORDER BY program_id, itog DESC;
-
+```
 
 
 
