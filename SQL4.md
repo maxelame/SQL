@@ -73,3 +73,4 @@ SELECT name_program, name_enrollee, itog FROM enrollee
 	JOIN program USING (program_id)
 WHERE str_id<=plan
 ORDER BY name_program, itog DESC
+```
