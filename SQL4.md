@@ -76,7 +76,8 @@ ORDER BY name_program, itog DESC
 ```
 
 
-
+SELECT *
+FROM applicant_order 
 
 
 
