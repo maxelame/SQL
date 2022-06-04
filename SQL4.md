@@ -44,7 +44,11 @@ SET itog = itog + Бонус;
 ```
 
 
+CREATE TABLE applicant_order
+SELECT * FROM applicant
+ORDER BY 1, 3 DESC;
 
+DROP TABLE applicant
 
 
 
