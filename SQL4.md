@@ -52,10 +52,10 @@ DROP TABLE applicant
 ```
 
 
-
+```
 ALTER TABLE applicant_order ADD
 str_id int FIRST
-
+```
 
 
 
