@@ -15,7 +15,7 @@ ORDER BY program_id, itog DESC;
 ```
 
 
-
+```
 DELETE FROM applicant
 USING
   applicant
@@ -31,7 +31,7 @@ USING
  ) AS t
  ON applicant.program_id = t.program_id AND
     applicant.enrollee_id = t.enrollee_id
-
+```
 
 
 
