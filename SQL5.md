@@ -41,7 +41,7 @@ ORDER BY 1;
 ```
 
 
-
+```
 SELECT
     rate_group Группа, 
     CASE rate_group
@@ -66,7 +66,7 @@ FROM
 ) query_in
 GROUP BY rate_group
 ORDER BY 1;
-
+```
 
 
 
