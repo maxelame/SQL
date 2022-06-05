@@ -23,7 +23,7 @@ GROUP BY step.step_id, keyword.keyword_id
 ORDER BY keyword.keyword_id;
 ```
 
-
+```
 SELECT 
     concat(module_id,'.',lesson_position,
            IF(step_position < 10, ".0","."),
@@ -38,7 +38,7 @@ WHERE keyword_name = 'MAX' OR keyword_name ='AVG'
 GROUP BY ШАГ
 HAVING COUNT(*) = 2
 ORDER BY 1;
-
+```
 
 
 
