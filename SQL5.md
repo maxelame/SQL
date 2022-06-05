@@ -84,7 +84,7 @@ SELECT  step_name AS Шаг, ROUND((correct/count)*100) AS Успешность
 FROM table1
 ORDER BY 2, 1
 ```
-
+```
 WITH get_passed (student_name, pssd)
     AS
         (
@@ -102,7 +102,7 @@ SELECT student_name AS Студент, ROUND(100*pssd/(SELECT COUNT(DISTINCT ste
     END AS Результат
 FROM get_passed
 ORDER BY Прогресс DESC, Студент
-
+```
 
 
 
