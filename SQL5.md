@@ -70,7 +70,19 @@ ORDER BY 1;
 
 
 
+WITH table1 (step_name, correct, count) AS (   
+SELECT 
+  step_name, 
+  SUM( IF (result = 'correct' , 1 , 0)) AS s, 
+  COUNT(result) AS c
+  FROM step 
+  JOIN step_student USING (step_id)
+  GROUP BY step_name
+    )
 
+SELECT  step_name AS Шаг, ROUND((correct/count)*100) AS Успешность
+FROM table1
+ORDER BY 2, 1
 
 
 
