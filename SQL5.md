@@ -104,7 +104,7 @@ FROM get_passed
 ORDER BY Прогресс DESC, Студент
 ```
 
-
+```
 SELECT student_name AS Студент, 
     CONCAT(LEFT(step_name, 20), '...') AS Шаг, 
     result AS Результат, 
@@ -115,7 +115,7 @@ FROM student
     INNER JOIN step USING(step_id)
 WHERE student_name = 'student_61'
 ORDER BY Дата_отправки;
-
+```
 
 
 
