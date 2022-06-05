@@ -12,7 +12,7 @@ SELECT CONCAT(LEFT(CONCAT(module_id, ' ', module_name), 16), '...') Модуль
 ```
 
 
-
+```
 INSERT INTO step_keyword
 SELECT step.step_id, keyword.keyword_id 
 FROM 
@@ -21,7 +21,7 @@ FROM
 WHERE step.step_name REGEXP CONCAT(' ', CONCAT(keyword.keyword_name, '\\b'))
 GROUP BY step.step_id, keyword.keyword_id
 ORDER BY keyword.keyword_id;
-
+```
 
 
 
