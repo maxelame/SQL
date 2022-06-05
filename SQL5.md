@@ -24,6 +24,22 @@ ORDER BY keyword.keyword_id;
 ```
 
 
+SELECT 
+    concat(module_id,'.',lesson_position,
+           IF(step_position < 10, ".0","."),
+           step_position," ",step_name) AS Шаг
+FROM
+   step
+   JOIN lesson USING(lesson_id)
+   JOIN module USING(module_id)
+   JOIN step_keyword USING (step_id)
+   JOIN keyword USING(keyword_id)
+WHERE keyword_name = 'MAX' OR keyword_name ='AVG'
+GROUP BY ШАГ
+HAVING COUNT(*) = 2
+ORDER BY 1;
+
+
 
 
 
