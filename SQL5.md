@@ -69,7 +69,7 @@ ORDER BY 1;
 ```
 
 
-
+```
 WITH table1 (step_name, correct, count) AS (   
 SELECT 
   step_name, 
@@ -83,7 +83,7 @@ SELECT
 SELECT  step_name AS Шаг, ROUND((correct/count)*100) AS Успешность
 FROM table1
 ORDER BY 2, 1
-
+```
 
 
 
