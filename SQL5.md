@@ -136,6 +136,9 @@ GROUP BY 1) AS TA
 order by 3;
 ```
 
+
+
+```
 SELECT  module_id AS Модуль, student_name AS Студент, COUNT(DISTINCT step_id) AS Пройдено_шагов ,
 	ROUND(COUNT(DISTINCT step_id) / 
       MAX(COUNT(DISTINCT step_id)) OVER(PARTITION BY module_id) *100, 1) AS Относительный_рейтинг
