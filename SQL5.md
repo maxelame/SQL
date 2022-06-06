@@ -231,3 +231,5 @@ WHERE sum_result = 0
 GROUP BY student_id
 ORDER BY Группа, Количество_шагов DESC, Студент;
 ```
+
+
