@@ -175,7 +175,7 @@ SELECT student_name as Студент,
 FROM get_time_lesson
 WHERE student_name in (SELECT * FROM get_students)
 ORDER BY 1,3;
-
+```
 
 
 
