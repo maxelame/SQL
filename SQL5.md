@@ -177,7 +177,7 @@ WHERE student_name in (SELECT * FROM get_students)
 ORDER BY 1,3;
 ```
 
-
+```
 SET @avg_time := (SELECT CEIL(AVG(submission_time - attempt_time))
 FROM step_student INNER JOIN student USING(student_id)
 WHERE student_name = "student_59" AND (submission_time - attempt_time) < 3600);
