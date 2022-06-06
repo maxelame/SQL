@@ -136,5 +136,14 @@ GROUP BY 1) AS TA
 order by 3;
 ```
 
-
+SELECT  module_id AS Модуль, student_name AS Студент, COUNT(DISTINCT step_id) AS Пройдено_шагов ,
+	ROUND(COUNT(DISTINCT step_id) / 
+      MAX(COUNT(DISTINCT step_id)) OVER(PARTITION BY module_id) *100, 1) AS Относительный_рейтинг
+FROM lesson 
+	JOIN step USING (lesson_id)
+	JOIN step_student USING (step_id)
+	JOIN student USING (student_id)
+WHERE result = 'correct'
+GROUP BY module_id, student_name
+ORDER BY 1, 4 DESC, 2
 
