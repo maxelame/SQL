@@ -117,7 +117,7 @@ WHERE student_name = 'student_61'
 ORDER BY Дата_отправки;
 ```
 
-
+```
 SELECT ROW_NUMBER() OVER (ORDER BY Среднее_время) AS Номер,
     Урок, Среднее_время
 FROM(
@@ -134,7 +134,7 @@ FROM
       GROUP BY 1, 2) AS query_1
 GROUP BY 1) AS TA
 order by 3;
-
+```
 
 
 
