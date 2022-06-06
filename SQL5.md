@@ -151,6 +151,8 @@ GROUP BY module_id, student_name
 ORDER BY 1, 4 DESC, 2
 ```
 
+
+```
 WITH get_time_lesson(student_name,  lesson, max_submission_time)
 AS(
     SELECT student_name,  CONCAT(module_id, '.', lesson_position), MAX(submission_time)
