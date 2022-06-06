@@ -198,5 +198,5 @@ WHERE student_name = "student_59"
 SELECT student_name AS Студент, less AS Шаг, rang AS Номер_попытки, result AS Результат, SEC_TO_TIME(CEIL(qr)) AS Время_попытки, ROUND((qr / (SUM(qr) OVER (PARTITION BY less ORDER BY less)) * 100), 2) AS Относительное_время
 FROM get_stat
 ORDER BY step_id, 3;
-
+```
 
