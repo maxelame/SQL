@@ -118,7 +118,22 @@ ORDER BY Дата_отправки;
 ```
 
 
-
+SELECT ROW_NUMBER() OVER (ORDER BY Среднее_время) AS Номер,
+    Урок, Среднее_время
+FROM(
+    SELECT 
+        Урок, ROUND(AVG(difference), 2) AS Среднее_время
+FROM
+     (SELECT student_id,
+             CONCAT(module_id, '.', lesson_position, ' ', lesson_name) AS Урок,
+             SUM((submission_time - attempt_time) / 3600) AS difference
+      FROM module INNER JOIN lesson USING (module_id)
+                  INNER JOIN step USING (lesson_id)
+                  INNER JOIN step_student USING (step_id)
+      WHERE submission_time - attempt_time <= 4 * 3600
+      GROUP BY 1, 2) AS query_1
+GROUP BY 1) AS TA
+order by 3;
 
 
 
